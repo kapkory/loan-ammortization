@@ -56,7 +56,6 @@ watch(monthlyContribution, (newContribution : number)=>{
   <div class="container flex flex-row">
     <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
      
-        <a href="https://www.cassavahub.com"><img style="height: 100px;" src="https://www.cassavahub.com/img/cassavahub-logo_113x50.png"></a>
         <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Dividents Calculator</h3>
 
 
@@ -91,6 +90,10 @@ watch(monthlyContribution, (newContribution : number)=>{
           </div>
          
       </form>
+
+      <hr class="mb-3"/>
+      <a href="https://www.cassavahub.com"><img style="width: 100%; margin-top: 1rem;" src="/src/assets/cassavahub.png"></a>
+
     </div>
     <div class="w-full px-4">
 
