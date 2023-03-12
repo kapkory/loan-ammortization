@@ -3,7 +3,6 @@ import { computed, onMounted, reactive, ref } from 'vue'
 import { ammortizedPayment } from '../Interfaces/ammortizedPayment';
 import LoanPaymentTable from './LoanPaymentTable.vue';
 const loanAmount = ref(0);
-const tetsRef = ref(null)
 let interestRate = ref(13);
 const terms = ref(12);
 // let ammortizedPayments = reactive([{
@@ -39,17 +38,17 @@ const monthlyRepayments = computed(()=>{
   // console.table(results)
   // table.pu
 
-   return 'monthly repayment '+ addCommas(monthly_repayment.value.toFixed()) + ' total repayment '+addCommas(total_repayment.toFixed());
+   return 'monthly repayment <b>'+ addCommas(monthly_repayment.value.toFixed()) + '</b> total repayment <b>'+addCommas(total_repayment.toFixed())+'</b>';
 
 })
 
 const ammortizedPayments = computed<ammortizedPayment[]>(() => {
   return calculatePrincipal(terms.value);
 })
-onMounted(()=>{
-  console.log("Value of reference is ")
-  console.log(tetsRef.value)
-})
+// onMounted(()=>{
+//   console.log("Value of reference is ")
+//   console.log(tetsRef.value)
+// })
 
 function calculateInterest(balance :number) :number{
   let  newBalance = balance * monthlyRate();
@@ -123,9 +122,9 @@ function calculatePrincipal(terms :number){
 
      <div class="w-full px-4">
 
-      <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Repayments Details {{ tetsRef }}</h3>    
-      <span class="text-gray-800 text-base px-6 mb-5">
-        {{ monthlyRepayments}}
+      <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Repayments Details </h3>    
+      <span class="text-gray-800 text-base px-6 mb-5" v-html="monthlyRepayments">
+        
       </span>
         <LoanPaymentTable :loanAmount="loanAmount" :ammortizedPayments="ammortizedPayments"/>
         <span class="text-muted">total items is {{ammortizedPayments.length }}</span>
