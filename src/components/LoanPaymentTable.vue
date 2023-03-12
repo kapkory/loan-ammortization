@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import {ammortizedPayment} from '../Interfaces/ammortizedPayment';
 defineProps<{
    loanAmount: number,
-   ammortizedPayments:ammortizedPayment
+   ammortizedPayments:ammortizedPayment[]
 }>()
 
 function addCommas(nStr : any) {
@@ -23,7 +23,7 @@ function addCommas(nStr : any) {
               <thead  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="py-3 px-6">#</th>
-                  <th scope="col" class="py-3 px-6">Amount</th>
+                  <th scope="col" class="py-3 px-6">Amount in USD</th>
                   <th scope="col" class="py-3 px-6">Interest</th>
                   <th scope="col" class="py-3 px-6">Principal</th>
                   <th scope="col" class="py-3 px-6">Balance</th>

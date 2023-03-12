@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, reactive, ref } from 'vue'
+import { ammortizedPayment } from '../Interfaces/ammortizedPayment';
 import LoanPaymentTable from './LoanPaymentTable.vue';
 const loanAmount = ref(0);
 const tetsRef = ref(null)
@@ -42,7 +43,7 @@ const monthlyRepayments = computed(()=>{
 
 })
 
-const ammortizedPayments = computed(() => {
+const ammortizedPayments = computed<ammortizedPayment[]>(() => {
   return calculatePrincipal(terms.value);
 })
 onMounted(()=>{
@@ -91,6 +92,9 @@ function calculatePrincipal(terms :number){
 
   <div class="container flex flex-row">
     <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Loan Calculator</h3>
+
+
       <span class="text-1xl text-center text-gray-800 mb-8 ">
           Enter the Loan Amount and Repayments will be automatically calculated
           <hr class="mt-3"/>
