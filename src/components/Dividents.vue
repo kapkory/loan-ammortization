@@ -101,16 +101,16 @@ watch(monthlyContribution, (newContribution : number)=>{
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-1">
                     Month
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-1">
                     Deposit Contribution <small class="text-muted">(Per Month)</small>
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-1">
                     Qualifying Savings
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-1">
                     Gross Dividends
                 </th>
     
@@ -133,7 +133,7 @@ watch(monthlyContribution, (newContribution : number)=>{
                 </td>
             </tr>
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     Total 
                 </th>
                  <td></td>
@@ -141,7 +141,7 @@ watch(monthlyContribution, (newContribution : number)=>{
                     {{ totalQualifyingSavings }}
                  </td>
 
-                <td class="px-6 py-4">
+                <td class="px-6 py-2">
                     {{ (totalQualifyingSavings* interestOnContribution/100).toFixed(2) }}
                 </td>
                
@@ -150,21 +150,21 @@ watch(monthlyContribution, (newContribution : number)=>{
 
             
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" colspan="3" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" colspan="3" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     Dividend from Share Capital (Share Capital * Interest on Share Capital)
                 </th>
             
-                <td class="px-6 py-4">
+                <td class="px-6 py-2">
                     {{ (shareCapital * interestOnShareCapital/100).toFixed(2) }}
                 </td>
                
             </tr>
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" colspan="3" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" colspan="3" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     Gross Dividends
                 </th>
             
-                <td class="px-6 py-4">
+                <td class="px-6 py-2">
                     {{ ((shareCapital * interestOnShareCapital/100) + (totalQualifyingSavings* interestOnContribution/100)).toFixed(2) }}
 
                 </td>
@@ -172,11 +172,11 @@ watch(monthlyContribution, (newContribution : number)=>{
             </tr>
 
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <th scope="row" colspan="3" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <th scope="row" colspan="3" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     Withholding Tax
                 </th>
             
-                <td class="px-6 py-4">
+                <td class="px-6 py-2">
                    {{ (((shareCapital * interestOnShareCapital/100) + (totalQualifyingSavings* interestOnContribution/100)) * (withholdingTax/100)).toFixed(2)  }}
                 </td>
                
