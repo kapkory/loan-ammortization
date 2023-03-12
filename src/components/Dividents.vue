@@ -60,7 +60,7 @@ watch(monthlyContribution, (newContribution : number)=>{
 
 
       <span class="text-1xl text-center text-gray-800 mb-8 ">
-          Enter the Loan Amount and Repayments will be automatically calculated
+          Fill in the Form for your divident to be Calculated
           <hr class="mt-3"/>
       </span>    
     
