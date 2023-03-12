@@ -56,11 +56,11 @@ watch(monthlyContribution, (newContribution : number)=>{
   <div class="container flex flex-row">
     <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
      
-        <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Dividents Calculator</h3>
+        <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Dividends Calculator</h3>
 
 
       <span class="text-1xl text-center text-gray-800 mb-8 ">
-          Fill in the Form for your divident to be Calculated
+          Fill in the Form for your dividend to be Calculated
           <hr class="mt-3"/>
       </span>    
     
@@ -111,7 +111,7 @@ watch(monthlyContribution, (newContribution : number)=>{
                     Qualifying Savings
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Gross Dividents
+                    Gross Dividends
                 </th>
     
             </tr>
@@ -151,7 +151,7 @@ watch(monthlyContribution, (newContribution : number)=>{
             
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" colspan="3" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Divident from Share Capital (Share Capital * Interest on Share Capital)
+                    Dividend from Share Capital (Share Capital * Interest on Share Capital)
                 </th>
             
                 <td class="px-6 py-4">
@@ -161,7 +161,7 @@ watch(monthlyContribution, (newContribution : number)=>{
             </tr>
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" colspan="3" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Gross Dividents
+                    Gross Dividends
                 </th>
             
                 <td class="px-6 py-4">
